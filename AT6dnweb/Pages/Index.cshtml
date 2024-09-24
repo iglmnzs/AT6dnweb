@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Questão 6 - AT";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Questão 6 - AT</h1>
+    <p>
+        Relacionamento Um-para-Um-> Aqui a relação é equivalente, uma entidade se associa a uma única instância
+        de uma outra entidade e esta mesma se associa a apenas uma instância da primeira entidade. Ou seja, uma Pessoa
+        pode ter apenas um Cpf e um Cpf se vincula a apenas uma Pessoa. É gerenciada através de uma única chave estrangeira 
+        que pode estar em qualquer uma das entidades que se relacionam, utilizando o DataAnnotations. No banco de dados são criadas duas tabelas. Cada uma
+        contém a chave primária e uma delas é usada como chave estrangeira na outra entidade, assim se estabelece a ligação
+        entre elas.
+
+        Relacionamento Um-para-Muitos -> Aqui, uma entidade é associada a várias instâncias  de uma outra
+        entidade, mas estas instâncias se associam a apenas uma única instância da entidade associada. Se estabelece a partir
+        de uma chave estrangeira na entidade dependente, utilizando o DataAnnotations, e costuma ser o tipo mais comum de relação. Como exemplo: Uma Categoria
+        pode ter vários Produtos, no entanto, cada Produto pertence somente a uma única Categoria. No banco também se cria duas 
+        tabelas onde a chave estrangeira que referencia a entidade principal é inserida na tabela da entidade dependente.
+    
+
+        Relacionamento Muitos-para-Muitos -> Nesse caso, uma entidade pode se associar a várias instâncias de uma 
+        outra entidade e vice-versa. Todo o gerenciamento de associação é feito através de uma tabela de junção com chaves
+        estrangeiras, com o uso do DataAnnotations, e ambas apontam as chaves primárias das entidades associadas.
+        Exemplo para esse tipo: Um Professor pode lecionar em várias Cadeiras e uma Cadeira pode 
+        ter muitos Professores. Já nesse banco de dados, três tabelas são criadas, ao invés de duas. Ou seja, 
+        Duas tabelas das respectivas indentidades e mais uma que formaliza a junção(tabela intermediária).
+    </p>
+</div>
